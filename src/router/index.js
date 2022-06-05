@@ -1,29 +1,43 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Router from 'vue-router'
 
-Vue.use(VueRouter)
+const Home = () => import('@/views/home/index.vue') 
+const Category = () => import('@/views/category/index.vue')
+const Cart = () => import('@/views/cart/index.vue')
+const Profile = () => import('@/views/profile/index.vue')
 
+
+// 1. 安装插件
+Vue.use(Router)
+
+// 2. 创建路由对象
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    redirect: '/home'
+  },
+  {
+    path: '/home',
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/category',
+    component: Category
+  },
+  {
+    path: '/cart',
+    component: Cart
+  },
+  {
+    path: '/profile',
+    component: Profile
   }
-]
 
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
+]
+const router = new Router({
+  routes,
+  mode: 'history'
 })
 
+// 3. 导出router
 export default router
