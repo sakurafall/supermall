@@ -15,7 +15,6 @@ export default {
 <style>
 .navbar {
   display: flex;
-  color: #fff;
   font-size: 16px;
   line-height: 44px;
   text-align: center;
@@ -23,6 +22,8 @@ export default {
 }
 .navbar .center {
   flex: 1;
+  display: flex;
+  justify-content: space-around;
 }
 .left, .right {
   width: 60px;

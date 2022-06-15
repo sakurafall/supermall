@@ -7,11 +7,16 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@better-scroll/core": "^2.4.2",
+    "@better-scroll/observe-image": "^2.4.2",
+    "@better-scroll/pull-up": "^2.4.2",
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
+    "fastclick": "^1.0.6",
     "lib-flexible": "^0.3.2",
     "postcss-px2rem": "^0.3.0",
     "vue": "^2.6.11",
+    "vue-lazyload": "^3.0.0-rc.2",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
@@ -22,6 +27,7 @@
     "@vue/cli-service": "~4.5.15",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue-lazyload": "^3.0.0-rc.2",
     "vue-template-compiler": "^2.6.11"
   }
 }
